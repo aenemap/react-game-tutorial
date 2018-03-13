@@ -1,2 +1,1 @@
-# React-Game-Tutorial
-A tutorial for a react game using svg, Auth0 and sockets
+https://auth0.com/blog/developing-games-with-react-redux-and-svg-part-3/
