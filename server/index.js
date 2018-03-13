@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 const jwksClient = require('jwks-rsa')
 
 const client = jwksClient({
-  jwksUri: 'https://johnvsk.eu.auth0.com/.well-known/jkws.json'
+  jwksUri: 'https://johnvsk.eu.auth0.com/.well-known/jwks.json'
 })
 
 const players = [
@@ -55,7 +55,7 @@ io.on('connection', (socket) => {
 
   verifyPlayer(token, (err) => {
     if (err) socket.disconnect()
-    io.emit('players', player)
+    io.emit('players', players)
   })
 
   socket.on('new-max-score', newMaxScoreHandler)
